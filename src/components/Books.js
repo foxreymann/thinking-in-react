@@ -1,5 +1,6 @@
 import React from 'react'
 import books from '../mocks/books'
+import BookList from './BookList'
 
 class Books extends React.Component {
   // this.props.name
@@ -51,15 +52,9 @@ class Books extends React.Component {
               </ul>
             </div>
           </div>
-          <div className="row book-list">
-            { books.map( book => (
-              <div className="col-xs-6 col-sm-3" key={ book.id }>
-                <div className="thumbnail">
-                  <img alt="" className="img-responsive" src={ book.cover }/>
-                </div>
-              </div>
-            )) }
-          </div>
+          <BookList
+            books={ books }
+          />
         </div>
       </section>
     )
