@@ -4,6 +4,7 @@ import Menu from './Navigations/Menu'
 import Header from './Header'
 import About from './About'
 import Footer from './Footer'
+import Navbar from './Navbar'
 import books from '../mocks/books'
 
 class App extends React.Component {
@@ -52,23 +53,9 @@ class App extends React.Component {
           toggleMenu={ this.toggleMenu }
         />
 
-        <nav className="navbar navbar-default navbar-fixed-top navbar-custom">
-            <div className="container">
-                <div className="navbar-header">
-                    <a className="navbar-brand">LeanJS</a>
-                </div>
-                <ul className="nav navbar-nav pull-right">
-                    <li className="hidden-xs">
-                        <a href="#about">About us</a>
-                    </li>
-                    <li>
-                      <button onClick={ this.toggleMenu } className="btn btn-lg btn-outline">
-                        <i className="fa fa-graduation-cap"></i> <span>Training</span>
-                      </button>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        <Navbar
+          toggleMenu={ this.toggleMenu }
+        />
 
         <Header title="Library" />
 
